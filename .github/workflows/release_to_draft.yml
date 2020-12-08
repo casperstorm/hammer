@@ -8,32 +8,35 @@ on:
         required: true
 
 jobs:
-  run:
+  build:
+    name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
-      - name: Packaging
-      - uses: actions/checkout@v2
-      - uses: papeloto/action-zip@v1
-        with:
-          files: Hammer.toc Hammer.lua
-          dest: Hammer.zip
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Package Project
+        run: |
+          zip --junk-paths Hammer.zip Hammer.toc Hammer.lua
 
       - name: Create Release
-        id: create-release
+        id: create_release
         uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.event.inputs.tag }}
           release_name: ${{ github.event.inputs.tag }}
           draft: true
           prerelease: false
-      
-      - name: Add package
+
+      - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./Hammer.zip
           asset_name: Hammer.zip
           asset_content_type: application/zip
