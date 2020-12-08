@@ -1,6 +1,7 @@
 ## Interface: 90002
 ## Version: 1.0
 ## Title: Hammer
+## Notes: Dead simple addon to auto repair your gear when you interact with a merchant.
 ## Author: Casper Rogild Storm
 
 Hammer.lua
