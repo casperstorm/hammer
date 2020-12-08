@@ -6,8 +6,8 @@ local function Hammer()
         if repairAllCost <= money then
             RepairAllItems()
             DEFAULT_CHAT_FRAME:AddMessage(
-                "|c0000FF00 Equipment was repaired for " ..
-                    GetCoinText(repairAllCost, ", ") .. ".|r")
+                "Equipment was repaired for " ..
+                    GetCoinText(repairAllCost, ", "))
         else
             DEFAULT_CHAT_FRAME:AddMessage("Insufficient funds to repair")
         end
