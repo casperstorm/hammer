@@ -1,7 +1,4 @@
 local function Hammer()
-    DEFAULT_CHAT_FRAME:AddMessage("|c0000FF00 Equipment was repaired for " ..
-                                      GetCoinText(repairAllCost, ", ") .. ".|r")
-
     local repairAllCost, canRepair = GetRepairAllCost()
     local money = GetMoney()
 
