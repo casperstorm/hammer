@@ -1,6 +1,6 @@
 # Hammer
 
-Hammer is a dead simple World of Warcraft addon to auto repair you gear when you interact with a merchant.
+Hammer is a dead simple World of Warcraft addon to auto repair your gear when you interact with a merchant.
 
 ## License
 
