@@ -17,7 +17,7 @@ jobs:
 
       - name: Package Project
         run: |
-          zip --junk-paths Hammer.zip Hammer.toc Hammer.lua
+          zip -r Hammer.zip Hammer
 
       - name: Create Release
         id: create_release
