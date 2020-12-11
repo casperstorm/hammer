@@ -1,5 +1,5 @@
 ## Interface: 90002
-## Version: 1.0
+## Version: 1.0.1
 ## Title: Hammer
 ## Author: Casper Rogild Storm
 
