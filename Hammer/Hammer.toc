@@ -1,5 +1,5 @@
 ## Interface: 90005
-## Version: 1.0.2
+## Version: 1.0.3
 ## Title: Hammer
 ## Notes: Dead simple addon to auto repair your gear when you interact with a merchant.
 ## Author: Casper Rogild Storm
